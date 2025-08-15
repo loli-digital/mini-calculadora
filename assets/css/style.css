@@ -1,0 +1,109 @@
+:root {
+    --bg-color: hsl(351, 100%, 86%);
+    --layout-color: hsl(349, 100%, 95%);
+    --hover-color: hsl(351, 74%, 51%);
+    --font-family-p: "Chewy", system-ui;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: 1.6rem;
+    font-family: var(--font-family-p);
+}
+
+.section_layout {
+    max-width: 60rem;
+    margin:  0 auto;
+    padding: 2rem;
+    background-color: var(--layout-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+
+    h1 {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+.article_layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: 2rem;
+
+    input[type="text"] {
+        width: 5rem;
+        padding: 1rem;
+        border-color: var(--bg-color);
+        border-radius: 5px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 0.7rem;
+        border-radius: 5px;
+        box-shadow: 0 0 2.5px var(--hover-color);
+        cursor: pointer;
+        background-color: var(--bg-color);
+        transition: background-color 0.3s linear;
+        font-family: var(--font-family-p);
+        font-size: 1.8rem;
+
+        &:hover {
+            background-color: var(--hover-color);
+            color: white;
+        }
+    }
+}
+
+footer {
+
+    padding-top: 3rem;
+
+    p {
+        text-align: center;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+        color: var(--layout-color);
+        filter: drop-shadow(0 0 2px var(--hover-color));
+    }
+
+    i {
+        font-size: 4rem;
+        transition: color 0.3s linear;
+    
+        &:hover {
+            color: var(--hover-color);
+            filter: drop-shadow(0 0 2px hsl(0, 0%, 100%));
+        }
+    }
+}
